@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n;cin>>n;
+    int a[n];
+    for(int i=0;i<n;i++)cin>>a[i];
+    bool f=false;
+    for(int i=1;i<n;i++)
+    {
+        if(a[i]%2==0 and a[0]%2!=0)
+        {
+            f=true;
+            break;
+        }
+        if(a[i]%2!=0 and a[0]%2==0)
+        {
+            f=true;
+            break;
+        }
+    }
+    if(f==true){
+        sort(a,a+n);
+    }
+    for(int i=0;i<n;i++)cout<<a[i]<<" ";
+}
