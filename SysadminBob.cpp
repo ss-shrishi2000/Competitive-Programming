@@ -1,32 +1,41 @@
 #include<bits/stdc++.h>
 using namespace std;
-void stop()
-{
-    cout<<"No solution";
-    exit(0);
-}
 int main()
 {
     string s;cin>>s;
-    int cnt=0;
-    bool flag=true;
-    if(s[0]=='@' || s[s.size()-1]=='@')stop();
-    for(int i=0;i<s.size();i++)
+    int c=0,l=s.size();
+    int d[l+1],j=0,x=0;
+    memset(d,0,sizeof(d));
+    if(s[0]=='@' or s[l-1]=='@')
     {
-        if(i!=0 && (s[i-1]=='@') && (s[i+1]=='@' || (s[i]=='@')))stop();
-        if(s[i]=='@')cnt++;
+    cout<<"No solution";return 0;
     }
-    if(cnt==0)stop();
-    for(int i=0;i<s.size();i++)
+    for(int i=0;i<l;i++)
+    {
+        if(s[i]=='@')c++;
+        if(s[i]!='@')x++;
+        else{
+            d[j++]=x;
+            x=0;
+        }
+    }
+    for(int i=1;i<j;i++)
+    {
+        if(d[i]<2){
+            cout<<"No solution";
+            return 0;
+        }
+    }
+    if(c==0)
+    {
+        cout<<"No solution";return 0;
+    }
+    for(int i=0;i<l;i++)
     {
         cout<<s[i];
-        if(flag==false && cnt!=0)
-        {
-            cout<<",";flag=true;
-        }
-        else if(s[i]=='@')
-        {
-            flag=false;cnt--;
+        if (s[i]=='@' && c!=1){
+        c--;cout<<s[i+1]<<',';
+        i++;
         }
     }
     return 0;

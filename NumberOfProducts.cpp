@@ -2,28 +2,17 @@
 using namespace std;
 int main()
 {
-    int n;cin>>n;
-    int a[n];for(int i=0;i<n;i++)cin>>a[i];
-    int cnt=0;
-    for(int i=0;i<n;i++)
+    cin.tie(0);
+    ios_base::sync_with_stdio(0);
+    long long n;cin>>n;
+    auto s=0ll,t=0ll,q=n*(n+1)/2;
+    for (auto i=0;i<n;i++)
     {
-        int c=0;
-        for(int j=i+1;j<n;j++)
-        {
-           if(a[j]*a[i]<0&&(a[i]>0)&&(c==0))
-           {
-               c=1;cnt++;
-           }
-           else if(a[i]*a[j]<0&&(a[i]<0)&&(c==0))
-           {
-               cnt+=2;c=1;
-           }
-           else if(a[i]*a[j]>0&&(c==1))
-           {
-               cnt++;
-           }
-           else if(a[i]*a[j]<0&&(c==1))break;
-        }
+    int a;cin>>a;
+    if(a>0)t++;
+    else
+        t=i-t;
+    s+=t;
     }
-    cout<<cnt;
+    cout<<q-s<<' '<<s;
 }

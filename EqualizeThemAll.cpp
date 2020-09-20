@@ -1,27 +1,46 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
-int main() {
-	int n;cin>>n;
-	vector<int> a(n),f(20000000,0);
-	for(int i=0;i<n;i++)
+map<int,int> mp;
+const int N=200005;
+int main()
+{
+    int n;cin>>n;
+    long long int a[n],m=0,pos=0;
+    map<long long int,long long int> mp;
+    set<int> p;
+    for(int i=0;i<n;i++)
     {
     cin>>a[i];
-    f[a[i]]++;
+    p.insert(a[i]);
+    mp[a[i]]++;
+    if(m<mp[a[i]])
+    {
+        m=mp[a[i]];pos=i;
     }
-	int maxval=max_element(f.begin(),f.end())-f.begin();
-
-	int p=find(a.begin(),a.end(),maxval)-a.begin();
-	cout<<n-f[maxval]<<endl;
-
-    for(int i=p-1;i>=0;i--){
-        cout<<1+(a[i]>a[i+1])<<" "<<i+1<<" "<<i+2<<endl;
-        a[i]=a[i+1];
     }
-    for(int i=0;i<n-1;i++){
-        if(a[i+1]!=maxval){
-            assert(a[i]==maxval);
-            cout<<1+(a[i+1]>a[i])<<" "<<i+2<<" "<<i+1<<endl;
-            a[i+1]=a[i];
+    if(p.size()==1){cout<<0;return 0;}
+    cout<<n-m<<endl;
+    for(int i=pos-1;i>=0;i--)
+    {
+        if(a[i]<a[pos])
+        {
+           cout<<1<<" "<<i+1<<" "<<i+2<<endl;
+        }
+        else if(a[i]>a[pos])
+        {
+            cout<<2<<" "<<i+1<<" "<<i+2<<endl;
         }
     }
+    for(int i=pos+1;i<n;i++)
+    {
+        if(a[i]<a[pos])
+        {
+           cout<<1<<" "<<i+1<<" "<<i<<endl;
+        }
+        else if(a[i]>a[pos])
+        {
+            cout<<2<<" "<<i+1<<" "<<i<<endl;
+        }
+    }
+    return 0;
 }

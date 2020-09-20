@@ -1,18 +1,20 @@
 #include<bits/stdc++.h>
 using namespace std;
-#define fo(i,n) for(int i=0;i<n;i++)
 int main()
 {
     int n;cin>>n;
-    int a[n],smalpos=1e9;
-    long long sum=0;
-    fo(i,n)
+    long long int a[n];
+    long long int modd=1000000000,sum=0;
+    for(int i=0;i<n;i++)
     {
-    cin>>a[i];
-    if(a[i]>0)sum+=a[i];
-    if(a[i]%2!=0)smalpos=min(smalpos,abs(a[i]));
+        cin>>a[i];
+        if(a[i]>0)sum+=a[i];
+        if(a[i]%2!=0)
+        {
+            modd=min(modd,abs(a[i]));
+        }
     }
-    if(sum%2==0)sum-=smalpos;
-    cout<<sum;
+    if(sum%2!=0)cout<<sum;
+    else cout<<sum-modd;
     return 0;
 }
