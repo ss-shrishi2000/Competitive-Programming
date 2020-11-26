@@ -1,24 +1,26 @@
 #include<bits/stdc++.h>
+#define lli long long int
 using namespace std;
 int main()
 {
-    int n,d;cin>>n>>d;
-    int a,b,x,y;cin>>a>>b;
-    pair<int,int> p[n];
-    for(int i=0;i<n;i++)
+    int n,d,a,b,x,y;cin>>n>>d>>a>>b;
+	vector<pair<int,int>> vec;
+	vector<int> ans;
+	for(int i=0;i<n;i++)
     {
-        cin>>x>>y;
-        p[i].first=a*x+b*y;
-        p[i].second=i+1;
-    }
-    sort(p,p+n);
-    int i;
-    for(i=0;i<n;i++)
+		cin>>x>>y;
+		vec.push_back(make_pair(a*x+b*y,i+1));
+	}
+	sort(vec.begin(),vec.end());
+	for(int i=0;i<vec.size() and d>=vec[i].first;i++)
+	{
+		ans.push_back(vec[i].second);
+		d-=vec[i].first;
+	}
+	cout<<ans.size()<<endl;
+	for(int i=0;i<ans.size();i++)
     {
-        d-=p[i].first;
-        if(d<0)break;
-    }
-    cout<<i<<endl;
-    for(int j=0;j<i;j++)cout<<p[j].second<<" ";
-    cout<<endl;
+		cout<<ans[i]<<" ";
+	}
+	return 0;
 }
