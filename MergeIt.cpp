@@ -6,8 +6,15 @@ int main()
     while(t--)
     {
         int n;cin>>n;
-        int a[n];long long s=0;
-        for(int i=0;i<n;i++){cin>>a[i];s+=a[i];}
-        cout<<(s/3)<<endl;
+        int a=0,b=0,c=0,x;
+        for(int i=0;i<n;i++)
+        {
+            cin>>x;
+            if(x%3==0)a++;
+            else if(x%3==1)b++;
+            else c++;
         }
+        cout<<a+min(b,c)+abs(b-c)/3<<endl;
+    }
+    return 0;
 }
