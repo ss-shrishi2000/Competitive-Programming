@@ -3,21 +3,45 @@ using namespace std;
 int main()
 {
     int n;cin>>n;
-    int a[n+10];
-    int l[n+10],r[n+10];
-    for(int i=1;i<=n;i++){
-    cin>>a[i];
-    }
-    l[0]=1e9; r[n+1]=1e9;
-    for(int i=1;i<=n;i++)
+    int a[n],b[n];
+    memset(b,-1,sizeof(b));
+    for(int i=0;i<n;i++)cin>>a[i];
+    int first_ind=INT_MIN;
+    int last_ind=INT_MIN;
+    for(int i=0;i<n;i++)
     {
-        if(a[i]==0)l[i]=0;
-        else l[i]=l[i-1]+1;
+        if(a[i]==0)
+        {
+            first_ind=i;
+            b[i]=0;
+        }
+        else if(a[i]!=0)
+        {
+            if(first_ind!=INT_MIN)
+            {
+                b[i]=abs(i-first_ind);
+            }
+        }
+       // cout<<b[i]<<" ";
     }
-    for(int i=n;i>=1;i--)
+    for(int i=n-1;i>=0;i--)
     {
-        if(a[i]==0)r[i]=0;
-        else r[i]=r[i+1]+1;
+        if(a[i]==0)
+        {
+            last_ind=i;
+        }
+        else{
+            if(last_ind!=INT_MIN && b[i]!=-1)
+            {
+                b[i]=min(b[i] , abs(i-last_ind ));
+            }
+            else if(b[i]==-1)
+            {
+                b[i]=abs(i-last_ind);
+            }
+        }
     }
-    for(int i=1;i<=n;i++)cout<<min(l[i],r[i])<<" ";
+    for(int i=0;i<n;i++)
+        cout<<b[i]<<" ";
+    return 0;
 }
