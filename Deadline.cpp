@@ -2,13 +2,20 @@
 using namespace std;
 int main()
 {
- int t;cin>>t;
- while(t--)
-  {
-   int n,d;cin>>n>>d;
-   int x=(n/2);
-   int p=(d%(x+1)==0)?(d/(x+1)):(d/(x+1))+1;
-   if(p+x<=n)cout<<"YES"<<endl;
-   else cout<<"NO"<<endl;
-  }
+    int t;cin>>t;
+    while(t--)
+    {
+        long long int n,d;cin>>n>>d;
+        long long int x=n/2;
+        if(d<=n)
+            cout<<"YES"<<endl;
+        else{
+            long long int k= (d+x)/(x+1);
+            if(k+x <= n)
+                cout<<"YES"<<endl;
+            else
+                cout<<"NO"<<endl;
+        }
+    }
+    return 0;
 }
