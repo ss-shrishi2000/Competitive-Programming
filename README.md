@@ -1,2 +1,2 @@
 # CodeforcesSolutions
-Problems attempted by me!!!
+Practice Problems attempted by me!!!
