@@ -2,19 +2,31 @@
 using namespace std;
 int main()
 {
-    int n,x,y;cin>>n>>x>>y;
+    long long int n,x,y;
+    cin>>n>>x>>y;
     string s;cin>>s;
-    long long int c=0,p=0;
-    if(s[0]=='0')c++;
-    for(int i=1;i<n;i++)
+    long long int cnt=0;
+    for(int i=0;i<s.size();)
     {
-        if(s[i]==s[i-1])continue;
-        if(s[i]=='0')c++;
+        if(s[i]=='0')
+        {
+            while(s[i]=='0' && i<s.size())
+                i++;
+            cnt+=1;
+        }
+        else
+        {
+            while(s[i]=='1' && i<s.size())
+                i++;
+        }
     }
-    if(c==0)cout<<0;
-    else{
-        long long int r=(c-1)*x;
-        long long int r1=c*y;
-        cout<<min(r+y,r1);
+    //cout<<cnt;
+    if(cnt==0)
+    {
+        cout<<0;
+        return 0;
     }
+    long long int ans= (cnt-1)*(min(x,y)) + y;
+    cout<<ans;
+    return 0;
 }
