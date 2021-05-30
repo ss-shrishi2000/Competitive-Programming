@@ -1,2 +1,2 @@
-# CodeforcesSolutions
-Practice Problems attempted by me!!!
+# Problem-Solving
+The given repository contains solutions to the problems attempted by me.
