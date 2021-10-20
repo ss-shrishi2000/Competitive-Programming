@@ -7,9 +7,13 @@ int main()
     int cnt=0;
     for(int i=0;i<s.size();i++)
     {
-        if(s.substr(i,5)==s1 || (s.substr(i,4)==s2) || (s.substr(i,5)==s3) || (s.substr(i,3)==s4) || (s.substr(i,6)==s5))cnt++;
+        if(s.substr(i,5)==s1 || (s.substr(i,4)==s2) || (s.substr(i,5)==s3) || (s.substr(i,3)==s4) || (s.substr(i,6)==s5))
+            cnt++;
     }
-    if(cnt==1)cout<<"YES";
-    else cout<<"NO";
+    if(cnt==1)
+        cout<<"YES";
+    else 
+        cout<<"NO";
+    
     return 0;
 }
