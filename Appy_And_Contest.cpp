@@ -2,7 +2,9 @@
 using namespace std;
 int gcd(int a,int b)
 {
-    if(b==0)return a;
+    if(b==0)
+        return a;
+    
     return (gcd(b,b%a));
 }
 long long lcm(int a,int b,int g)
@@ -15,11 +17,15 @@ int main()
     int t;cin>>t;
     while(t--)
     {
-        int n,a,b,k;cin>>n>>a>>b>>k;
+        int n,a,b,k;
+        cin>>n>>a>>b>>k;
         long long g=gcd(a,b);
         long long l=lcm(a,b,g);
+        
         long long ans=n/a+n/b-2*(n/l);
-        if(ans>=k)cout<<"Win"<<endl;
-        else cout<<"Lose"<<endl;
+        if(ans>=k)
+            cout<<"Win"<<endl;
+        else 
+            cout<<"Lose"<<endl;
     }
 }
