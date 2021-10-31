@@ -19,9 +19,12 @@ int main()
     cin>>k>>s;
     a[0]++;
     lli ans=0;
-    for(int i=0;i<s.size();i++){
-        if(s[i]=='1')p++;
-        if(p>=k)ans+=a[p-k];
+    for(int i=0;i<s.size();i++)
+    {
+        if(s[i]=='1')
+            p++;
+        if(p>=k)
+            ans+=a[p-k];
         a[p]++;
     }
     cout<<ans;
