@@ -1,6 +1,5 @@
 #include<bits/stdc++.h>
 using namespace std;
-
 int dp[6000][6000];
 int main()
 {
@@ -9,7 +8,6 @@ int main()
     string a,b;
     cin>>a>>b;
     int ans=INT_MIN;
-
     for(int i=1;i<=n;i++)
     {
         for(int j=1;j<=m;j++)
