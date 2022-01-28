@@ -15,11 +15,15 @@ int main()
         }
 
         int j=i;
-        if(j%2==0){
-        s2+='1';c2[0]++;
+        if(j%2==0)
+        {
+        s2+='1';
+        c2[0]++;
         }
-        else{
-        s2+='0';c2[1]++;
+        else
+        {
+        s2+='0';
+        c2[1]++;
         }
     }
     int a1=a-c1[0];
@@ -56,7 +60,10 @@ int main()
     yummy+='1';
     b2--;
     }
-    if(dummy.size()==a+b)cout<<dummy;
-    else cout<<yummy;
+    if(dummy.size()==a+b)
+        cout<<dummy;
+    else 
+        cout<<yummy;
+    
     return 0;
 }
