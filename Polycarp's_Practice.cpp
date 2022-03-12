@@ -36,7 +36,8 @@ int main()
        ans=c[i]+(c[i+1]-c[i]);
        else
         ans=c[i+1]-c[i];
-    cout<<ans<<" ";
+            
+       cout<<ans<<" ";
     }
     ans=n-c[k-1];
     cout<<ans<<endl;
