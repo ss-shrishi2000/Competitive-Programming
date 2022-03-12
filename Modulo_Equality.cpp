@@ -14,10 +14,13 @@ using namespace std;
 int main()
 {
     fast;
-    int n,m;cin>>n>>m;
+    int n,m;
+    cin>>n>>m;
     int a[n],b[n];
-    fo(i,n)cin>>a[i];
-    fo(i,n)cin>>b[i];
+    fo(i,n)
+        cin>>a[i];
+    fo(i,n)
+        cin>>b[i];
     sort(a,a+n);
     sort(b,b+n);
     lli ans=1e9;
