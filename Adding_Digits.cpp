@@ -30,6 +30,8 @@ int main()
     }
 
     cout<<a<<div;
-    for(int j=n-1;j>0;j--)cout<<0;
+    for(int j=n-1;j>0;j--)
+        cout<<0;
+    
     return 0;
 }
