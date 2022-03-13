@@ -3,7 +3,8 @@ using namespace std;
 int main()
 {
     string s;cin>>s;
-    int dp[100005],l=s.size();
+    int dp[100005];
+    int l=s.size();
     memset(dp,0,sizeof(dp));
     long long int ans=1;
     for(int i=1;i<=l;i++)
