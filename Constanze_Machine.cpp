@@ -8,13 +8,18 @@ int main()
    int dp[l+1];
     for (int i=0;i<l;i++)
     {
-        if (s[i]== 'w' || s[i]== 'm'){cout <<0<<endl;return 0;}
+        if (s[i]== 'w' || s[i]== 'm')
+        {
+           cout <<0<<endl;
+           return 0;
+        }
     }
     dp[0]=dp[1]=1;
     for(int i=2;i<=l;i++)
     {
         dp[i] = dp[i - 1];
-        if(s[i-2]==s[i-1]&&(s[i-1]=='u'||s[i-1]=='n'))dp[i]=(dp[i]+dp[i-2])%p;
+        if(s[i-2]==s[i-1]&&(s[i-1]=='u'||s[i-1]=='n'))
+           dp[i]=(dp[i]+dp[i-2])%p;
     }
     cout<<dp[l];
 }
