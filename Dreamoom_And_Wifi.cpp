@@ -2,9 +2,12 @@
 using namespace std;
 int calc(int x,int y)
 {
-    if(x!=0)return calc(x-1,y+1)+calc(x-1,y-1);
-   else if(y==0)return 1;
-   else return 0;
+    if(x!=0)
+        return calc(x-1,y+1)+calc(x-1,y-1);
+   else if(y==0)
+       return 1;
+   else 
+       return 0;
 }
 int main()
 {
