@@ -2,7 +2,8 @@
 using namespace std;
 int main()
 {
-    string s,ans="";cin>>s;
+    string s,ans="";
+    cin>>s;
     ans+=s[0];
     set<char> check,p;
     check.insert('a');
