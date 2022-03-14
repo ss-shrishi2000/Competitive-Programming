@@ -2,13 +2,17 @@
 using namespace std;
 int main()
 {
-    int t;cin>>t;
+    int t;
+    cin>>t;
     while(t--)
     {
-        int n;cin>>n;
-        string s,s1;cin>>s;
+        int n;
+        cin>>n;
+        string s,s1;
+        cin>>s;
         int l=s.size();
-        if(l==2 && (s[0]==s[1] || (s[0]>s[1])))cout<<"NO"<<endl;
+        if(l==2 && (s[0]==s[1] || (s[0]>s[1])))
+            cout<<"NO"<<endl;
         else
         {
             cout<<"YES"<<endl<<2<<endl;
