@@ -9,12 +9,15 @@ int LCS(string x,string y)
     {
         for(int j=0;j<=m;j++)
         {
-            if(i==0||(j==0))dp[cur][j]=0;
-            else if(x[i-1]==y[j-1]){
+            if(i==0||(j==0))
+                dp[cur][j]=0;
+            else if(x[i-1]==y[j-1])
+            {
             dp[cur][j]=dp[1-cur][j-1]+1;
             ans=max(ans,dp[cur][j]);
             }
-            else {
+            else 
+            {
                 dp[cur][j]=0;
             }
         }
@@ -24,7 +27,8 @@ int LCS(string x,string y)
 }
 int main()
 {
-    string x,y;cin>>x>>y;
+    string x,y;
+    cin>>x>>y;
     int n=x.size(),m=y.size();
     cout<<LCS(x,y);
 }
