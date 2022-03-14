@@ -2,7 +2,8 @@
 using namespace std;
 int main()
 {
-    int n;cin>>n;
+    int n;
+    cin>>n;
     int a[n];
    long long int tot_sum=0;
     map<int,int> mp;
