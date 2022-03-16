@@ -15,26 +15,48 @@ int main()
     set<int> a,b,c;
     string s;int n,m;
     cin>>n>>s;
-    fo(i,n)if(s[i]!='*')a.insert(s[i]);
-    for(char ch='a';ch<='z';ch++){if(a.find(ch)==a.end())b.insert(ch);}
+    fo(i,n)
+        if(s[i]!='*')
+            a.insert(s[i]);
+    
+    for(char ch='a';ch<='z';ch++)
+    {
+        if(a.find(ch)==a.end())
+            b.insert(ch);
+    }
     string d;
     bool f=true;
     cin>>m;
-    fo(i,m){
+    fo(i,m)
+    {
         cin>>d;
         f=true;
-        fo(j,n){
-            if(s[j]!='*' && (s[j]!=d[j])){f=false;break;}
-            if(s[j]=='*' && (a.find(d[j])!=a.end())){f=false;break;}
+        fo(j,n)
+        {
+            if(s[j]!='*' && (s[j]!=d[j]))
+            { 
+                f=false;
+                break;
+            }
+            if(s[j]=='*' && (a.find(d[j])!=a.end()))
+            {
+                f=false;
+                break;
+            }
         }
         if(f==true)
         {
             c.clear();
-            fo(j,n){
-            if(b.find(d[j])!=b.end()){c.insert(d[j]);}
+            fo(j,n)
+            {
+            if(b.find(d[j])!=b.end())
+            {
+                c.insert(d[j]);
+            }
             }
             b=c;
         }
     }
     cout<<b.size();
+    return 0;
 }
