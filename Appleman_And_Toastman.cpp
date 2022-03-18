@@ -2,8 +2,10 @@
 using namespace std;
 int main()
 {
-    int n;cin>>n;
-    int x;vector<long long> v;
+    int n;
+    cin>>n;
+    int x;
+    vector<long long> v;
     for(int i=0;i<n;i++)
     {
         cin>>x;
