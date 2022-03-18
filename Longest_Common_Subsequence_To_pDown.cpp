@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 int dp[200][200];
+
 int LCS(string x,string y)
 {
     int m=x.size(),n=y.size();
@@ -8,7 +9,8 @@ int LCS(string x,string y)
     {
         for(int j=0;j<=n;j++)
         {
-            if(i==0||(j==0))dp[i][j]=0;
+            if(i==0||(j==0))
+                dp[i][j]=0;
         }
     }
     for(int i=1;i<=m;i++)
