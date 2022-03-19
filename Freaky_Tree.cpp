@@ -28,16 +28,20 @@ int main()
             q.pop();
             for(int i=0;i<(int)v[r].size();i++)
             {
-                if(!visited[v[r][i].first]){
+                if(!visited[v[r][i].first])
+                {
                     xor_v[v[r][i].first]=v[r][i].second^xor_v[r];
                     q.push(v[r][i].first);
                     visited[v[r][i].first]=true;
                 }
             }
-            if(v[r].size()==1){
-                if(xor_v[r]==1)ans++;
+            if(v[r].size()==1)
+            {
+                if(xor_v[r]==1)
+                    ans++;
             }
         }
         cout<<ans<<endl;
     }
+    return 0;
 }
