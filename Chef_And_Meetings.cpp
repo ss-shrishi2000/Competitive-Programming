@@ -23,7 +23,8 @@ int convert_min(string time)
 }
 int main()
 {
-    int t;cin>>t;
+    int t;
+    cin>>t;
     while(t--)
     {
         string a="";
@@ -36,7 +37,6 @@ int main()
 
         int hour_chef=convert_hr(a);
         int min_chef=convert_min(a);
-
         string ans="";                                   //storing the answer
         int n;
         cin>>n;
