@@ -19,15 +19,11 @@ using namespace std;
     {
         vector<int> results;
         int count_freq[12] = {0};
-
         for(string &word : words)
             count_freq[getFreq(word)]++;
 
-
         for(int i = 9; i >= 0; i--)
             count_freq[i] += count_freq[i + 1];
-
-
         for(string &query : queries)
             results.push_back(count_freq[getFreq(query) + 1]);
 
