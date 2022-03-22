@@ -2,10 +2,13 @@
 using namespace std;
 int main()
 {
-    int n;cin>>n;
-    string s;cin>>s;
+    int n;
+    cin>>n;
+    string s;
+    cin>>s;
     int c[3]{0};
-    for(int i=0;i<n;i++)c[s[i]-'0']++;
+    for(int i=0;i<n;i++)
+        c[s[i]-'0']++;
     int x=n/3;
     for(int i=0;i<n;i++)
     {
