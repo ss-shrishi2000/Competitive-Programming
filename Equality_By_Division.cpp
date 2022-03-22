@@ -15,7 +15,6 @@ int main()
     {
         int m=arr[i];
         int j=0;
-
         while(m>0)
         {
             vec[m].push_back(j);
@@ -25,7 +24,6 @@ int main()
         vec[0].push_back(j);
     }
     long long int ans=INT_MAX,sum=0;
-
     for(int i=0;i<200005;i++)
     {
         sort(vec[i].begin(),vec[i].end());
