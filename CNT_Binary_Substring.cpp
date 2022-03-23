@@ -1,7 +1,8 @@
 
 class Solution {
 public:
-    int countBinarySubstrings(string s) {
+    int countBinarySubstrings(string s) 
+    {
         int res = 0;
         //prev is the count of previous duplicates, curr is the count of current duplicates
         int prev = 0;
