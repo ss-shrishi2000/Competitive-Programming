@@ -2,39 +2,41 @@
 using namespace std;
 int main()
 {
-    int queries;
-    cin>>queries;
-    int cust = 1;
+    int n,x,cst=1;
+    cin>>n;
+    set<int> current;
     set<pair<int,int>> st;
-    map<int,int> mp;
-    set<int> removed;
-    while (queries--)
+    map<int,int> hash;
+
+
+    for(int i=0; i<n; i++)
     {
-        int n;
-        cin>>n;
-        if (n==1)
+        int m;
+        cin>>x;
+        if(x==1)
         {
-            int cost;
-            cin>>cost;
-            st.insert(make_pair(cost, -cust));
-            mp[cust] = cost;
-            removed.insert(cust);
-            cust++;
+            cin>>m;
+            hash[cst]=m;
+            current.insert(cst);
+            st.insert({m,-cst});
+            cst++;
         }
-        else if(n==2)
+        else if(x==2)
         {
-            int cur = *removed.begin();
-            removed.erase(cur);
-            st.erase({mp[cur], -cur});
-            cout<<cur<<" ";
+            int toremove = *(current.begin());
+            current.erase(toremove);
+            st.erase(make_pair(hash[toremove], -toremove));
+            cout<<toremove<<" ";
         }
-        else
+        else if(x==3)
         {
-            pair<int,int> pp=*st.rbegin();
-            int cur= -pp.second;
-            st.erase(pp);
-            removed.erase(cur);
-            cout<<cur<<" ";
+            pair<int,int> pr = *(st.rbegin());
+            // pr->first = maximum tip
+            // pr->second = negative of the customer number
+            int cst_num = -(pr.second);
+            current.erase(cst_num);
+            st.erase(pr);
+            cout<<-(pr.second)<<" ";
         }
     }
     return 0;
