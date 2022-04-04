@@ -13,8 +13,7 @@ int main()
     v[s]= true;
     if(s==t)
     {
-    	cout<<"0";
-    	return 0;
+    	cout<<"0";return 0;
     }
     else
     {
