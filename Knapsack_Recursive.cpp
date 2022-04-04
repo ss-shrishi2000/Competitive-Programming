@@ -17,7 +17,9 @@ int main()
 {
     int n,w;cin>>n>>w;
     int vl[n],wt[n];
-    for(int i=0;i<n;i++)cin>>vl[i];
-    for(int j=0;j<n;j++)cin>>wt[j];
+    for(int i=0;i<n;i++)
+        cin>>vl[i];
+    for(int j=0;j<n;j++)
+        cin>>wt[j];
     cout<<knapsack(wt,vl,w,n);
 }
