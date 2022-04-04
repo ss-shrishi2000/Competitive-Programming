@@ -11,7 +11,7 @@ void addEdge(vector <int> graph[], int u, int v)
 int countNodes(int root, vector <int> graph[], int level, int n)
 {
     vector <bool> visited(n,false);
-    unordered_map<int,int> um;
+    unordered_map<int,int> ump;
     // BFS queue
     // stores {node value, node level}
     queue <pair<int,int>> q;
@@ -29,7 +29,7 @@ int countNodes(int root, vector <int> graph[], int level, int n)
 
         visited[front.first] = true;
         // Increase number of nodes at that level by 1
-        um[front.second]++;
+        ump[front.second]++;
 
         // Visit all the neighbor nodes of the popped node
         for(auto node : graph[front.first])
@@ -39,14 +39,13 @@ int countNodes(int root, vector <int> graph[], int level, int n)
         }
     }
 
-    return um[level];
+    return ump[level];
 }
 int main()
 {
     // define number of nodes & root node
     int n = 10;
     int root = 0;
-
     // construct the graph & link the nodes by edges
     vector <int> graph[n];
     vector <pair<int,int>> edges = {{0,1},{0,2},{1,3},{1,4},{1,5},{4,6},{2,6},{6,7},{6,9}};
