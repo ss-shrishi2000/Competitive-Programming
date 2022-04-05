@@ -6,33 +6,17 @@ int main()
     cin>>t;
     while(t--)
     {
-        string s;
-        cin>>s;
-        if(s.size()==2)
-        {
-            if(s[0]<s[1])
-                cout<< s[0] << " " << s[1] << endl;
-            else
-                cout<< s[1] << " " << s[0] << endl;
-        }
-        else
-        {
-            string p = s;
-            sort(p.begin(),p.end());
-            char r = p[0];
-            int j=0;
-            while(j<s.size())
-            {
-                if(s[j]!=r)
-                   j++;
-                else
-                    break;
-            }
-            string b = s.substr(0,j);
-            if(j!=s.size())
-                b+=s.substr(j+1);
+        string s; cin>>s;
+        set<char> c;
+        for(int i=0; i<s.size();i++)
+            c.insert(s[i]);
 
-            cout<< r << " " << b << endl;
-        }
+        auto p = *c.begin();
+        cout<< p << " ";
+        string ans="";
+        auto it= find(s.begin(),s.end(), p)-s.begin();
+        ans = s.substr(0,it) + s.substr(it+1);
+        cout<<ans<<endl;
     }
+    return 0;
 }
