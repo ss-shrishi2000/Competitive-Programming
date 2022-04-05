@@ -24,14 +24,9 @@ int main()
                 }
             }
         }
-        if(f==false)
-        {
-            cout<<"NO"<<endl;
-        }
+        if(f==false)cout<<"NO"<<endl;
         else
-        {
             cout<<"YES"<<endl;
-        }
     }
     return 0;
 }
