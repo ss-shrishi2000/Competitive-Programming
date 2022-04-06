@@ -24,7 +24,9 @@ int main()
     {
         if(mess[i]==b[check])check++;
     }
-    if(check==b.size())cout<<"yes";
-    else cout<<"no";
+    if(check==b.size())
+        cout<<"yes";
+    else 
+        cout<<"no";
 }
 
