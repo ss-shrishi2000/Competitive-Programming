@@ -15,12 +15,15 @@ int main()
     int t;cin>>t;
     int dp[30][30]{0},ans=0,p=26;
     string s;
-    fo(i,t){
+    fo(i,t)
+    {
        cin>>s;
        int x=s.size();
        int l=s[0]-'a',r=s[x-1]-'a';
-       fo(i,p){
-           if(dp[i][l]!=0 || (i==l))dp[i][r]=max(dp[i][l]+x,dp[i][r]);
+       fo(i,p)
+       {
+           if(dp[i][l]!=0 || (i==l))
+               dp[i][r]=max(dp[i][l]+x,dp[i][r]);
        }
     }
     fo(i,p)
