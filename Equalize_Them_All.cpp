@@ -4,7 +4,8 @@ map<int,int> mp;
 const int N=200005;
 int main()
 {
-    int n;cin>>n;
+    int n;
+    cin>>n;
     long long int a[n],m=0,pos=0;
     map<long long int,long long int> mp;
     set<int> p;
@@ -18,7 +19,11 @@ int main()
         m=mp[a[i]];pos=i;
     }
     }
-    if(p.size()==1){cout<<0;return 0;}
+    if(p.size()==1)
+    {
+        cout<<0;
+        return 0;
+    }
     cout<<n-m<<endl;
     for(int i=pos-1;i>=0;i--)
     {
