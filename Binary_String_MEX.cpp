@@ -5,7 +5,8 @@ int main()
     int t;cin>>t;
     while(t--)
     {
-        string s;cin>>s;
+        string s;
+        cin>>s;
         int n=s.size();
         int l=-1;
         int dp[1000000],dl[1000000];
