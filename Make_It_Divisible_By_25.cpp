@@ -6,24 +6,20 @@ int main()
     cin>>t;
     while(t--)
     {
-        long long int n;
-        int ans=50;
-        cin>>n;
-        int arr[25];
-        int ind=1;
-        while(n>0)
+        string s;
+        cin>>s;
+        int n = s.size();
+        int ans=INT_MAX;
+        for(int i=0; i<n; i++)
         {
-            arr[ind] = n%10;
-            n=n/10;
-            ind++;
-        }
-        for(int i=1;i<=ind;i++)
-			for(int j=i+1;j<=ind;j++)
+            for(int j=i+1; j<n; j++)
             {
-				int tmp=arr[j]*10+arr[i];
-				if(tmp==0||tmp==25||tmp==50||tmp==75)
-				ans=min(ans,j-2);
-			}
+                if(((s[i]-'0')*10 + (s[j]-'0'))%25==0)
+                {
+                    ans = min(ans,n-i-2);
+                }
+            }
+        }
         cout<<ans<<endl;
     }
     return 0;
