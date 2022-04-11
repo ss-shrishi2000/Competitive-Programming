@@ -16,8 +16,10 @@ int main()
     for(int i=1;i<=n;i++)
     {
         cin>>a[i];
-        if(i==1)pre[i]=a[i];
-        else pre[i]=pre[i-1]+a[i];
+        if(i==1)
+            pre[i]=a[i];
+        else 
+            pre[i]=pre[i-1]+a[i];
         if(i>=k)
         {
             avg+=(pre[i]-pre[i-k]);
