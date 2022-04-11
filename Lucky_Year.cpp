@@ -10,8 +10,7 @@ int main()
       temp = temp/10;
       count++;
     }
-  if(count==0)
-    cout<<"1"<<endl;
+  if(count==0)cout<<"1"<<endl;
   else
     {
       int d=pow(10,count-1);
