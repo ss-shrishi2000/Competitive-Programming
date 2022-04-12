@@ -2,7 +2,8 @@
 using namespace std;
 int main()
 {
-    long long a,n,k,sum=0,cnt=0;cin>>n>>k;
+    long long a,n,k,sum=0,cnt=0;
+    cin>>n>>k;
     for(int i=0;i<n;i++)
     {
         cin>>a;
@@ -16,7 +17,10 @@ int main()
             sum=(a+sum)%k;              //the remaining garbage which was less than k units and has to be thrown the next day.
         }
     }
-    if(sum!=0)cout<<cnt+1;
-    else cout<<cnt;
+    if(sum!=0)
+        cout<<cnt+1;
+    else 
+        cout<<cnt;
+    
     return 0;
 }
