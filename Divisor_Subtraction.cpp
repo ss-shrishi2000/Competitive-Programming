@@ -13,7 +13,8 @@ bool isprime(long long int n)
 }
 int main()
 {
-    long long int n;cin>>n;
+    long long int n;
+    cin>>n;
     if(n%2==0)
     {
         cout<<n/2;
