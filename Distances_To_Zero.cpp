@@ -2,10 +2,12 @@
 using namespace std;
 int main()
 {
-    int n;cin>>n;
+    int n;
+    cin>>n;
     int a[n],b[n];
     memset(b,-1,sizeof(b));
-    for(int i=0;i<n;i++)cin>>a[i];
+    for(int i=0;i<n;i++)
+        cin>>a[i];
     int first_ind=INT_MIN;
     int last_ind=INT_MIN;
     for(int i=0;i<n;i++)
