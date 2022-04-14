@@ -2,7 +2,8 @@
 using namespace std;
 int main()
 {
-    int n;cin>>n;
+    int n;
+    cin>>n;
     long long int p,k,m;
     for(int i=1;i<=sqrt(2*n);i++)
     {
