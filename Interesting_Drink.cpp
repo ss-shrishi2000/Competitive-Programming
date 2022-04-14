@@ -12,17 +12,22 @@ using namespace std;
 #define mod 1000000007
 int main()
 {
-    int n;cin>>n;
+    int n;
+    cin>>n;
     int a[n];
-    fo(i,n)cin>>a[i];
+    fo(i,n)
+        cin>>a[i];
     sort(a,a+n);
     int l=0,r=n-1;
     int mid,q;cin>>q;
     while(q--)
     {
-        int m;cin>>m;
-        if(m<a[0])cout<<"0"<<endl;
-        else if(m>=a[n-1])cout<<n<<endl;
+        int m;
+        cin>>m;
+        if(m<a[0])
+            cout<<"0"<<endl;
+        else if(m>=a[n-1])
+            cout<<n<<endl;
         else{
             l=0;r=n-1;
             while(l<=r)
