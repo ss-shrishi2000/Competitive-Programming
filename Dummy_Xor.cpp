@@ -2,8 +2,7 @@
 using namespace std;
 int main()
 {
-    int test;
-    cin>>test;
+    int test; cin>>test;
     long long int a[10000000];
     while(test--)
     {
