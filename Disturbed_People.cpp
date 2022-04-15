@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
+
 #define fast  ios_base::sync_with_stdio(false);cin.tie(0)
 #define ff first
 #define ss second
@@ -21,7 +22,8 @@ int main()
     {
 		if(a[i]==0 && a[i-1]==1 && a[i+1]==1)
         {
-			++ans;a[i + 1] = 0;
+			++ans;
+			a[i + 1] = 0;
 		}
 	}
 	cout<<ans<<endl;
