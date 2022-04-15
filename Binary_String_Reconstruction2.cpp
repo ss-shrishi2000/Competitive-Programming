@@ -2,10 +2,12 @@
 using namespace std;
 int main()
 {
-    int t;cin>>t;
+    int t;
+    cin>>t;
     while(t--)
     {
-        int n1,n2,n0;cin>>n0>>n1>>n2;
+        int n1,n2,n0;
+        cin>>n0>>n1>>n2;
         string ans="";
         if(n1==0)
         {
