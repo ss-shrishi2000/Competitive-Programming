@@ -17,9 +17,11 @@ int main()
     cin>>t1>>t2>>y1>>y2>>t0;
     while((y1>=0)&&(y2>=0))
     {
-        if(y1+y2==0)break;
+        if(y1+y2==0)
+            break;
         t=(t1*y1+t2*y2)/double(y1+y2);
-        if(t<t0){
+        if(t<t0)
+        {
         y1--;
         continue;
         }
