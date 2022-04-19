@@ -6,9 +6,11 @@ int main()
     cin>>t;
     while(t--)
     {
-        int w,h,n;cin>>w>>h>>n;
+        int w,h,n;
+        cin>>w>>h>>n;
         long long int ans=1;
-        if(n==1 && (w%2) && (h%2) ){
+        if(n==1 && (w%2) && (h%2) )
+        {
             cout<<"YES"<<endl;
             continue;
         }
