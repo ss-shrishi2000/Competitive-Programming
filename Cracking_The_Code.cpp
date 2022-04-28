@@ -2,7 +2,8 @@
 using namespace std;
 int main()
 {
-    int p;cin>>p;
+    int p;
+    cin>>p;
     long long q=1,a[5];
     string s;
     for(int i=4;i>=0;i--)
