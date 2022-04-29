@@ -29,7 +29,8 @@ int main()
 	string s="codeforces";
 	fo(i,10)
 	{
-		for(int j=0;j<a[i];j++)cout<<s[i];
+		for(int j=0;j<a[i];j++)
+			cout<<s[i];
 	}
 	return 0;
 }
