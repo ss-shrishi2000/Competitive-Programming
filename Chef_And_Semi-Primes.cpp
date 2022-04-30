@@ -22,7 +22,6 @@ int isSemiPrime(int x) {
 	}
 	if (x > 2)
 		++cnt;
-
 	return cnt == 2;
 }
 
