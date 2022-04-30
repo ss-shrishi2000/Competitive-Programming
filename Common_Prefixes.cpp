@@ -2,10 +2,12 @@
 using namespace std;
 int main()
 {
-    int t;cin>>t;
+    int t;
+    cin>>t;
     while(t--)
     {
-        int n;cin>>n;
+        int n;
+        cin>>n;
         string s=string(200,'a');
         char c='b';
         cout<<s<<endl;
