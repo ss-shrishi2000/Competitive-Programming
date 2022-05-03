@@ -2,33 +2,33 @@
 using namespace std;
 int main()
 {
-    int t;
-    cin>>t;
+    int t; cin>>t;
     while(t--)
     {
-        int flag , n, m;
-        cin>>flag>>n>>m;
-        vector<int> vn, vm;
-        int x;
-        for(int i=0;i<n;i++)
-            cin>>x, vn.push_back(x);
-        for(int i=0;i<m;i++)
-            cin>>x, vm.push_back(x);
-
-        int r=flag, i=0, j=0;
+        int k,n,m; cin>>k>>n>>m;
+        int a[n];
+        int b[m];
+        for(int i=0; i<n; i++)cin>>a[i];
+        for(int i=0; i<m; i++)cin>>b[i];
+        int sum = k;
         vector<int> ans;
-        bool f=true;
 
+        int i=0,j=0;
+        bool f=true;
         while(i<n || j<m)
         {
-            if( i<n && vn[i]==0 )
-                ans.push_back(0) , i++, r++;
-            else if( j<m && vm[j]==0 )
-                ans.push_back(0), j++, r++;
-            else if( i<n && vn[i] && vn[i]<=r )
-                ans.push_back(vn[i]), i++;
-            else if( j<m && vm[j] && vm[j]<=r )
-                ans.push_back(vm[j]), j++;
+            if(i<n && a[i]<=sum)
+            {
+                if(a[i]==0)sum++;
+                ans.push_back(a[i]);
+                i++;
+            }
+            else if(j<m && b[j]<=sum)
+            {
+                if(b[j]==0)sum++;
+                ans.push_back(b[j]);
+                j++;
+            }
             else
             {
                 f=false;
@@ -39,9 +39,10 @@ int main()
             cout<<-1<<endl;
         else
         {
-            for(int i=0;i<ans.size();i++)
+            for(int i=0; i<ans.size(); i++)
                 cout<<ans[i]<<" ";
             cout<<endl;
         }
     }
+    return 0;
 }
