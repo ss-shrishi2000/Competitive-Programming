@@ -1,33 +1,29 @@
 #include<bits/stdc++.h>
 using namespace std;
-bool cmp( pair<string,int> p1 , pair<string,int> p2 )
+bool cmp(string a, string b)
 {
-    for(int i=0;i<p1.first.size();i++)
+    for(int i=0; i<a.size(); i++)
     {
-        if(i%2==0)
+        if(a[i]==b[i])
+            continue;
+
+        if((i+1)%2)
         {
-            if(p1.first[i]!=p2.first[i])
-                return (p1.first < p2.first);
+            return (a[i]<b[i]);
         }
-        else {
-            if(p1.first[i]!=p2.first[i])
-                return (p1.first>p2.first);
-        }
+        else if((i+1)%2==0)
+            return (a[i]>b[i]);
     }
 }
 int main()
 {
     int n,m;
     cin>>n>>m;
-    vector<pair<string,int>> sr(n);
-    string s;
-
-    for(int i=0;i<n;i++)
-        cin>>s , sr[i].first = s , sr[i].second = i+1;
-
-    sort(sr.begin(), sr.end(), cmp);
-    for(int i=0;i<n;i++)
-       cout<<sr[i].second<<" ";
-
+    string s[n];
+    map<string,int> mp;
+    for(int i=0; i<n; i++)cin>>s[i], mp[s[i]] = i;
+    sort(s,s+n,cmp);
+    for(int i=0; i<n; i++)
+        cout<<mp[s[i]]+1<<" ";
     return 0;
 }
