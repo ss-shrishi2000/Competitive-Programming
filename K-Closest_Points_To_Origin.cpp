@@ -16,7 +16,8 @@ int main()
     for(int i=0;i<points.size();i++)
     {
         maxheap.push( {points[i][0]*points[i][0] + points[i][1]*points[i][1] ,{ points[i][0],points[i][1] } } );
-        if(maxheap.size()>k)maxheap.pop();
+        if(maxheap.size()>k)
+            maxheap.pop();
     }
     while(maxheap.empty()==false)
     {
@@ -25,6 +26,7 @@ int main()
         maxheap.pop();
 
     }
-    for(int i=0;i<ans.size();i++)cout<<ans[i][0]<<" "<<ans[i][1]<<endl;
+    for(int i=0;i<ans.size();i++)
+        cout<<ans[i][0]<<" "<<ans[i][1]<<endl;
     return 0;
 }
