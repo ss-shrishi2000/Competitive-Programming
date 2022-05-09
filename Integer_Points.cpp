@@ -13,7 +13,8 @@ using namespace std;
 int main()
 {
     fast;
-    int t;cin>>t;
+    int t;
+    cin>>t;
     fo(i,t)
     {
         lli n,m,x,y,e1=0,e2=0,o1=0,o2=0;
