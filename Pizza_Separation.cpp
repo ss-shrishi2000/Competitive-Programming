@@ -16,7 +16,8 @@ int main()
     fast;
     int n;cin>>n;
     int a[n],ans=1e8;
-    fo(i,n)cin>>a[i];
+    fo(i,n)
+        cin>>a[i];
     fo(i,n)
     {
         int s=0;
