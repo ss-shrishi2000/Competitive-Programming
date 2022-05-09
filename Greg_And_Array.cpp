@@ -3,8 +3,10 @@ using namespace std;
 long long int a[100005],b[100005],cum[100005],d[100005],l[100005],r[100005];
 int main()
 {
-    int n,m,x,y,k;cin>>n>>m>>k;
-    for(int i=1;i<=n;i++)cin>>a[i];
+    int n,m,x,y,k;
+    cin>>n>>m>>k;
+    for(int i=1;i<=n;i++)
+        cin>>a[i];
 
     for(int i=1;i<=m;i++)
     {
