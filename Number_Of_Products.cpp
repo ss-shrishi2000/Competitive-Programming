@@ -8,8 +8,10 @@ int main()
     auto s=0ll,t=0ll,q=n*(n+1)/2;
     for (auto i=0;i<n;i++)
     {
-    int a;cin>>a;
-    if(a>0)t++;
+    int a;
+    cin>>a;
+    if(a>0)
+        t++;
     else
         t=i-t;
     s+=t;
