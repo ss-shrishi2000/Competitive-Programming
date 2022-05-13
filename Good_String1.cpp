@@ -5,8 +5,7 @@ int main()
     int n;
     cin>>n;
 
-    string s, ans="";
-    cin>>s;
+    string s, ans=""; cin>>s;
     string r="";
     stack<char> stc;
     for(int i=0;i<n;i++)
