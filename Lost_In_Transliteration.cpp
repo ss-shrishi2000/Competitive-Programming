@@ -2,7 +2,8 @@
 using namespace std;
 int main()
 {
-    int t;cin>>t;
+    int t;
+    cin>>t;
     set<string> s;
     for(int i=0;i<t;i++)
     {
