@@ -12,8 +12,7 @@ int calc(int x)
 }
 int main()
 {
-    int a,b,c;
-    cin>>a>>b>>c;
+    int a,b,c;cin>>a>>b>>c;
     vector<int> v;
     for(int i=1;i<=81;i++)
     {
