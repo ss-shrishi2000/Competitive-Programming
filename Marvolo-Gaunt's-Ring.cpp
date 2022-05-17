@@ -16,7 +16,8 @@ int main()
     fast;
     lli n,p,q,r;cin>>n>>p>>q>>r;
     lli a[n+10];
-    fo(i,n)cin>>a[i];
+    fo(i,n)
+        cin>>a[i];
     lli dp[n+1][2]{0};
     dp[0][0]=p*a[0];
     fo2(i,n)
