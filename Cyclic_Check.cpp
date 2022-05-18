@@ -11,7 +11,8 @@ int graph[NODE][NODE] = {
    {0, 0, 1, 0, 0}
 };
 
-bool dfs(int curr, set<int>&wSet, set<int>&gSet, set<int>&bSet) {
+bool dfs(int curr, set<int>&wSet, set<int>&gSet, set<int>&bSet)
+{
    //moving curr to white set to grey set.
    wSet.erase(wSet.find(curr));
    gSet.insert(curr);
