@@ -29,7 +29,6 @@ int main()
 {
     int m,x,y;                     //queries to add edges
     cin>>V>>m;
-
     memset(visited,false,sizeof(visited));
     for(int i=0;i<m;i++)
     {
