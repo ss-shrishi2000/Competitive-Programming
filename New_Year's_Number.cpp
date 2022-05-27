@@ -1,27 +1,26 @@
 #include<bits/stdc++.h>
 using namespace std;
-bool dp[1000010];
 int main()
 {
     int t;
     cin>>t;
-    for(int i=0;i<=1000005;i++)
+    map<int, bool> mp;
+    for(int i=1; i<=1e6; i++)
     {
-        if(i==0)
-            dp[i]=true;
-        else if(i<2020)
-            dp[i]=false;
+        if(i<2020)
+           mp[i] = false;
+        else if(i==2020 || i==2021)
+            mp[i] = true;
         else
-            dp[i]=dp[i-2020] || dp[i-2021] ;
+            mp[i] = (mp[i-2020] || mp[i-2021]);
     }
+
     while(t--)
     {
-        int n;
-        cin>>n;
-        if(dp[n])
-          cout<<"YES"<<endl;
+        int n; cin>>n;
+        if(mp[n])
+            cout<<"YES"<<endl;
         else
-          cout<<"NO"<<endl;
+            cout<<"NO"<<endl;
     }
-    return 0;
 }
