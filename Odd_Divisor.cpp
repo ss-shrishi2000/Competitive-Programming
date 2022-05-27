@@ -1,24 +1,27 @@
 #include<bits/stdc++.h>
 using namespace std;
+#define lli long long int
 int main()
 {
-    int t;
-    cin>>t;
+    int t; cin>>t;
     while(t--)
     {
-        long long int n,x;
-        cin>>n;
-        bool f=false;
-        while(n%2==0)
+        lli n; cin>>n;
+        bool f = true;
+        if(n==3|| n==5 || n==7 || n==9)
+        {
+            cout<<"YES"<<endl;
+            continue;
+        }
+
+        while(n%2==0 && n>0)
             n=n/2;
 
-        if(n & (n-1) ==0)
-            f=false;
-        else
-            f=true;
+        if(n==1)
+            f = false;
 
         if(f)
-            cout<<"YES"<<endl;
+        cout<<"YES"<<endl;
         else
             cout<<"NO"<<endl;
     }
