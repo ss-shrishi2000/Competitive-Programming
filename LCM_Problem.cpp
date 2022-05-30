@@ -5,8 +5,11 @@ int main()
   int t;cin>>t;
   while(t--)
   {
-    int l,r;cin>>l>>r;
-    if(r-l==1)cout<<-1<<" "<<-1<<endl;
+    int l,r;
+    cin>>l>>r;
+    
+    if(r-l==1)
+      cout<<-1<<" "<<-1<<endl;
     else {
         if(l*2<=r)
         {
