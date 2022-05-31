@@ -13,7 +13,9 @@ int main()
             else c1++;
         }
         int m=min(c0,c1);
-        if(m%2==0)cout<<"NET"<<endl;
-        else cout<<"DA"<<endl;
+        if(m%2==0)
+           cout<<"NET"<<endl;
+        else  
+           cout<<"DA"<<endl;
     }
 }
