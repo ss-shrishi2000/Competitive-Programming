@@ -3,7 +3,8 @@ using namespace std;
 long long int p[100100],q[100100];
 int main()
 {
-    int t;cin>>t;
+    int t;
+    cin>>t;
     while(t--)
     {
         int c1=1,c2=1,a,b,n;
