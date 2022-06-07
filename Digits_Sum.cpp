@@ -2,20 +2,13 @@
 using namespace std;
 int main()
 {
-    int t;
-    cin>>t;
+    int t; cin>>t;
     while(t--)
     {
         int n;
         cin>>n;
-        if(n==0)
-            cout<<0<<endl;
-        else if(n>=1 && n<9)
-            cout<<0<<endl;
-        else if(n==9)
-            cout<<1<<endl;
-        else
-            cout<< (n+1)/10 << endl;
+        long long int x = (n+1)/10;
+        cout<<x<<endl;
     }
     return 0;
 }
