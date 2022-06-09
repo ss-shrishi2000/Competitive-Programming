@@ -2,7 +2,8 @@
 using namespace std;
 int main()
 {
-    int n,t;cin>>n>>t;
+    int n,t;
+    cin>>n>>t;
     double p,k;
     p=n*(1.000000011);
     k=1.000000011;
