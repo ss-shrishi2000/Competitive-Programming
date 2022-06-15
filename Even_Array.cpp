@@ -6,7 +6,8 @@ int main()
     cin>>t;
     while(t--)
     {
-    int n,cnt=0,c1=0 ,c2=0;cin>>n;
+    int n,cnt=0,c1=0 ,c2=0;
+    cin>>n;
     int a[n];
     for(int i=0;i<n;i++)
     {
