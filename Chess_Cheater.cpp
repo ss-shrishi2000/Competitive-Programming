@@ -6,9 +6,11 @@ int main()
     cin>>t;
     while(t--)
     {
-        int i,n,w=0,l=0,k;cin>>n>>k;
+        int i,n,w=0,l=0,k;
+        cin>>n>>k;
         int c=0,c1=0;
-		string s;cin>>s;
+		string s;
+                cin>>s;
 		vector<int> ans;
 		for(i=0;i<n;i++)if(s[i]=='W')w++;
 		if(w==0){
