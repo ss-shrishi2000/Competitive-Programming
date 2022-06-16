@@ -2,12 +2,14 @@
 using namespace std;
 int main()
 {
-    string s;cin>>s;
+    string s;
+    cin>>s;
     int n=s.size();
     int dp[n+1][n+1];
     memset(dp,0,sizeof(dp));
     for(int i=0;i<n;i++)
         dp[i][i]=1;
+    
     for(int cl=2;cl<=n;cl++)
     {
         for(int i=0;i<n-cl+1;i++)
