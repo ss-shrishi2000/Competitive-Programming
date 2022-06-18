@@ -2,9 +2,12 @@
 using namespace std;
 int main()
 {
-    long long n,i;cin>>n;
+    long long n,i;
+    cin>>n;
     long long int a[n];
-    for(i=1;i<=n;i++)cin>>a[i];
+    for(i=1;i<=n;i++)
+        cin>>a[i];
+    
     sort(a+1,a+n+1);
     long long int j=n;
     for(i=(n/2);i>0;i--)
