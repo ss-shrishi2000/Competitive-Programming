@@ -1,19 +1,31 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
-
-int main(){
-    int32_t t;
-    cin >> t;
-    while(t--){
-        int32_t n;
-        string c,s;
-        cin >> n >> c >> s;
-        int cnt = 0, last = -1;
-        for(int i=0;i<n;i++){
-            if(s[i] == c[0]) cnt++, last = i+1;
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int n;
+        cin>>n;
+        char c;
+        cin>>c;
+        string s;
+        cin>>s;
+        int a=0, od = 0;
+        for(int i=0;i<n;i++)
+        {
+                if(s[i]==c)
+                  a=i+1;
+               else
+                  od++;
         }
-        if(cnt == n) cout << "0\n";
-        else if(last > n/2) cout << "1\n" << last << '\n';
-        else cout << "2\n" << n-1 << ' ' << n << '\n';
+        if(a>=(n/2)+1)
+        {
+            (od)? cout<<"1\n"<<a<<"\n":cout<<"0\n";
+        }
+        else
+            cout<<"2\n"<<(n-1)<<" "<<n<<"\n";
     }
+    return 0;
 }
