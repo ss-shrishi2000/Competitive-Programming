@@ -13,7 +13,8 @@ using namespace std;
 int main()
 {
     fast;
-    string s;cin>>s;
+    string s;
+    cin>>s;
     int dp[100005];
     dp[0]=0;
     for(int i=1;i<s.size();i++)
