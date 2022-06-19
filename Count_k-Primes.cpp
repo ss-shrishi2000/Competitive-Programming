@@ -1,13 +1,12 @@
 #include<bits/stdc++.h>
 #define ll long long
 using namespace std;
-bool isPrime(int x) {
-	if(x < 2) {
-		return false;
-	}
-	if(x == 2 || x == 3) {
-		return true;
-	}
+bool isPrime(int x) 
+{
+	if(x < 2)return false;
+	
+	if(x == 2 || x == 3)return true;
+	
 	for(int i = 2; i <= sqrt(x) ; i++) {
 		if(x % i == 0) {
 			return false;
