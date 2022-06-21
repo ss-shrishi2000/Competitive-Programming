@@ -18,8 +18,10 @@ int main()
     fo(i,n)
 	{
 	    cin>>b>>a[i];
-	    if(b!=a[i])r=1;
-	    if(a[i]>a[i-1] && i!=0)m=0;
+	    if(b!=a[i])
+		    r=1;
+	    if(a[i]>a[i-1] && i!=0)
+		    m=0;
 	}
 	if(r==1)cout<<"rated"<<endl;
     else if(r==0 && m==1)cout<<"maybe"<<endl;
