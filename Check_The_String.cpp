@@ -2,8 +2,10 @@
 using namespace std;
 int main()
 {
-    string s,p="",q="",r="";cin>>s;
+    string s,p="",q="",r="";
+    cin>>s;
     int a1=0,a2=0,a3=0;
+    
     for(int i=0;i<s.size();i++)
     {
         if(s[i]=='a')
