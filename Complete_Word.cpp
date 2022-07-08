@@ -2,7 +2,8 @@
 using namespace std;
 int main()
 {
-    string s;cin>>s;
+    string s;
+    cin>>s;
     bool f=true;
     int l=s.size();
     for(int i=0;i<l-26;i++)
