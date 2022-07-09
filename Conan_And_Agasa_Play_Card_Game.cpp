@@ -2,7 +2,8 @@
 using namespace std;
 int main()
 {
-    int n;cin>>n;
+    int n;
+    cin>>n;
 	map<int,int> mp;
 	bool f=false;
 	for(int i=0;i<n;++i)
@@ -17,7 +18,8 @@ int main()
 			f=true;break;
 		}
 	}
-	if(f==true)cout<<"Conan";
+	if(f==true)
+        cout<<"Conan";
 	else
         cout<<"Agasa";
 	return 0;
