@@ -3,12 +3,14 @@ using namespace std;
 int main()
 {
     string s;cin>>s;
-    int n=s.size(),m,x;cin>>m;
+    int n=s.size(),m,x;
+    cin>>m;
     int sum[n];
     memset(sum,0,sizeof(sum));
     for(int i=0;i<m;i++)
     {
-        cin>>x;x--;
+        cin>>x;
+        x--;
         for(int i=x;i<=n-x-1;i++)
         {
             sum[i]++;
