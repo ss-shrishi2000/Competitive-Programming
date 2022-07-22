@@ -15,14 +15,15 @@ int dfs(vector<int> v[],int source,int destination)
     {
         int r=q.front();
         q.pop();
-        for(int i=0;i<(int)v[r].size();i++){
-
+        for(int i=0;i<(int)v[r].size();i++)
+        {
             if(!visited[v[r][i]])
             {
                 level[v[r][i]]=level[r]+1;
                 ans=level[v[r][i]];
                 q.push(v[r][i]);
-                if(v[r][i]==destination)return ans;
+                if(v[r][i]==destination)
+                   return ans;
                 visited[v[r][i]]=true;
             }
         }
@@ -34,7 +35,8 @@ int main()
     int t;cin>>t;
     while(t--)
     {
-        int n,m,x,y;cin>>n>>m;
+       int n,m,x,y;
+       cin>>n>>m;
         vector<int> v[n+1];
         for(int i=0;i<m;i++)
         {
