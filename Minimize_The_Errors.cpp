@@ -2,11 +2,15 @@
 using namespace std;
 int main()
 {
-    long long int n,k1,k2;cin>>n>>k1>>k2;
+    long long int n,k1,k2;
+    cin>>n>>k1>>k2;
     long long int a[n],b[n];
     priority_queue<long long int> q;
-    for(int i=0;i<n;i++)cin>>a[i];
-    for(int i=0;i<n;i++)cin>>b[i];
+    for(int i=0;i<n;i++)
+        cin>>a[i];
+    for(int i=0;i<n;i++)
+        cin>>b[i];
+    
     long long int error=0,ans;
     for(int i=0;i<n;i++)
     {
