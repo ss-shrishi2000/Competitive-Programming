@@ -1,2 +1,3 @@
 # Problem-Solving
-The given repository contains solutions to the problems attempted by me.
+The given repository contains my solutions to the problems attempted on various competitive 
+coding platforms.
