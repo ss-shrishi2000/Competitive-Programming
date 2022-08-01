@@ -10,7 +10,7 @@ int main()
         cin>>n;
         string s=string(200,'a');
         char c='b';
-        cout<<s<<endl;
+        cout<<s;
         for (int i=0;i<n;i++)
         {
         int x;cin>>x;
