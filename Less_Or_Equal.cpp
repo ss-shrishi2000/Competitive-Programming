@@ -1,7 +1,9 @@
 #include<bits/stdc++.h>
 using namespace std;
-int main(){
-   int n,k,sum=0; cin>>n>>k;
+int main()
+{
+   int n,k,sum=0; 
+   cin>>n>>k;
    pair<int,int> a[2001];
    vector<int> v;
    v.push_back(0);
