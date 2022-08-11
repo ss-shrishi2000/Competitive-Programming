@@ -14,21 +14,30 @@
 using namespace std;
 int main()
 {
-    string s;cin>>s;
+    string s;
+    cin>>s;
     int pos=-1;
     fo(i,s.size())
     {
-        if(s[i]=='0')continue;
+        if(s[i]=='0')
+            continue;
         else{
-            pos=i;break;
+            pos=i;
+            break;
         }
     }
-    if(pos!=-1){
-    pos++;s.erase(pos);
+    if(pos!=-1)
+    {
+        pos++;
+        s.erase(pos);
     }
     fo3(i,s.size()/2)
     {
-        if(s[i]!=s[s.size()-i-1]){cout<<"NO";return 0;}
+        if(s[i]!=s[s.size()-i-1])
+        {
+            cout<<"NO";
+            return 0;
+        }
     }
     cout<<"YES";
 }
