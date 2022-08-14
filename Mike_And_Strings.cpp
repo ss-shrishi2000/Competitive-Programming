@@ -2,9 +2,11 @@
 using namespace std;
 int main()
 {
-    int n;cin>>n;
+    int n;
+    cin>>n;
     string s[179];
-    for(int i=0;i<n;i++)cin>>s[i];
+    for(int i=0;i<n;i++)
+          cin>>s[i];
     int ans =1e9;
     for(int i=0;i<n;i++){
     int cnt=0;
