@@ -7,8 +7,7 @@ int main()
     for(int i=0;i<n;i++)
     {
     scanf("%d",&a);
-    if(a>mx)
-        mx=a;
+    if(a>mx)mx=a;
     sum+=a;
     }
     if(sum%2==0 && sum>=2*mx)
