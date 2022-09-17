@@ -7,7 +7,8 @@ int total(int a[][],int n,int k)
     if(n==0)
         return 0;
         k=x;
-    while(k>=0){
+    while(k>=0)
+{
     return dp[n][k]=min(dp[n-1][k-1],dp[n-1][k-1]+a[n-1][k]);
     k--;
     }
