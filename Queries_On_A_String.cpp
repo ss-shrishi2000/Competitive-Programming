@@ -6,7 +6,8 @@ int main()
     cin>>s>>q;
     while(q--)
     {
-        int a,b,c;cin>>a>>b>>c;
+        int a,b,c;
+        cin>>a>>b>>c;
         c%=(b-a+1);
         rotate(&s[a-1],&s[b-c],&s[b]);
     }
