@@ -2,7 +2,8 @@
 using namespace std;
 int main()
 {
-    int n,m,p=0;cin>>n>>m;
+    int n,m,p=0;
+    cin>>n>>m;
     set<string> s;
     string str;
     for(int i=0;i<n;i++)
@@ -21,5 +22,6 @@ int main()
         cout<<"YES";
     else
         cout<<"NO";
+    
     return 0;
 }
