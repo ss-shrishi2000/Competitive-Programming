@@ -2,10 +2,11 @@
 using namespace std;
 int main()
 {
-    int n,m,p=0;
+    int n, m, p=0;
     cin>>n>>m;
     set<string> s;
     string str;
+    
     for(int i=0;i<n;i++)
     {
         cin>>str;
@@ -18,6 +19,7 @@ int main()
     }
     if((n+m-s.size())%2)
         n++;
+    
     if(n>m)
         cout<<"YES";
     else
