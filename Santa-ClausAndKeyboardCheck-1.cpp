@@ -2,7 +2,8 @@
 using namespace std;
 int main()
 {
-    string a,b;cin>>a>>b;
+    string a, b;
+    cin>>a>>b;
     int l=a.size();
     vector<pair<char,char>> v;
     vector<char> c(5000,'0');
