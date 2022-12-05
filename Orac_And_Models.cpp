@@ -14,16 +14,20 @@ using namespace std;
 const int r=1e5;
 int main()
 {
-    int t,n;cin>>t;
+    int t,n;
+    cin>>t;
     while(t--)
     {
     cin>>n;
     int a[n+1];
     fo(i,n)cin>>a[i];
     int dp[n+1]{1};
-    fo(i,n){
-        for(int j=i+i;j<=n;j+=i){
-            if(a[i]<a[j])dp[j]=max(dp[j],dp[i]+1);
+    fo(i,n)
+    {
+        for(int j=i+i;j<=n;j+=i)
+        {
+            if(a[i]<a[j])
+                dp[j]=max(dp[j],dp[i]+1);
         }
     }
     int m=*max_element(dp+1,dp+n+1);
