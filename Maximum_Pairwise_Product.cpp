@@ -4,12 +4,10 @@
 #define     pb                     push_back
 #define     endl                     '\n'
 
-typedef   long long int               ll;
+typedef long long int ll;
 
 //freopen("input.txt","r",stdin);
 //freopen("output.txt","w",stdout);
-
-
 using namespace std;
 
 ll Make_operation(ll Operand_1, ll Operand_2, char op) {
