@@ -2,12 +2,13 @@
 using namespace std;
 int main()
 {
-    int n,m,q;cin>>n>>m>>q;
-    int a[n][m],b[n]{0},d;
-    for(int i=0;i<n;i++)
+    int n,m,q;
+    cin>>n>>m>>q;
+    int a[n][m], b[n]{0}, d;
+    for(int i=0; i < n; i++)
     {
-        d=0;
-        for(int j=0;j<m;j++)
+        d = 0;
+        for(int j = 0; j < m; j++)
         {
             cin>>a[i][j];
             if(a[i][j]==1)d++;
