@@ -1,9 +1,11 @@
 #include<bits/stdc++.h>
 using namespace std;
-struct node{
+struct node
+{
     int data;
     struct node *left,*right;
 };
+
 node* newnode(int data)
 {
     struct node *temp=new node();
