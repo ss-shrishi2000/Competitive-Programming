@@ -13,7 +13,8 @@ using namespace std;
 
 int main()
 {
-    int n,m;cin>>n>>m;
+    int n,m;
+    cin>>n>>m;
     int a[n],t,l,r;
     lli func[n];
     func[0]=1,func[1]=1;
