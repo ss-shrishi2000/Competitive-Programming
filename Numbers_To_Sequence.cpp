@@ -5,11 +5,12 @@ int main()
     int t;cin>>t;
     while(t--)
     {
-        long long int n;cin>>n;
+        long long int n;
+	cin>>n;
         long long l=n;
-		int maxn=1;
-		long long x=n;
-		for(long long i=2;i*i<=n;i++)
+	int maxn=1;
+	long long x=n;
+	for(long long i=2;i*i<=n;i++)
         {
 			int k=0;
 			while(n>1)
