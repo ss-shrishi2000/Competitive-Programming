@@ -2,7 +2,8 @@
 using namespace std;
 int main()
 {
-    int n;cin>>n;
+    int n;
+    cin>>n;
     string s;
     cin>>s;
     int f[26]{0};
