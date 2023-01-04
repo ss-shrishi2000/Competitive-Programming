@@ -8,23 +8,21 @@ int main()
     {
         int n;
         cin>>n;
-        string s;cin>>s;
-        stack<char> st;
-        for(int i=0;i<n;i++)
+        string s;
+        cin>>s;
+        int c = 0, ans = 0;
+        for(int i = 0; i < n; i++)
         {
             if(s[i]=='(')
-                st.push(s[i]);
+                c++;
             else
             {
-                if(st.empty()==false && st.top()=='(')
-                {
-                    st.pop();
-                }
-                else
-                    st.push(s[i]);
+                c--;
+                if(c<0)
+                    ans = min(ans, c);
             }
         }
-        cout<<st.size()/2<<endl;
+        cout<<abs(ans)<<endl;
     }
     return 0;
 }
