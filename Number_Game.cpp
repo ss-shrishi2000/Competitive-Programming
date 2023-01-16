@@ -13,13 +13,19 @@ using namespace std;
 int main()
 {
     fast;cin.tie(0);
-    int t;cin>>t;
+    int t;
+    cin>>t;
     fo(i,t)
     {
         int n;cin>>n;
         lli moves=0;
-        if(n==1){cout<<"FastestFinger"<<endl;continue;}
-        else if(n==2)cout<<"Ashishgup"<<endl;
+        if(n==1)
+	{
+		cout<<"FastestFinger"<<endl;
+		continue;
+	}
+        else if(n==2)
+		cout<<"Ashishgup"<<endl;
         else if(n%2!=0)
         {
             cout<<"Ashishgup"<<endl;
