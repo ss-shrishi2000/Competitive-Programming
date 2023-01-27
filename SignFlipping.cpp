@@ -16,14 +16,16 @@ int main()
     int t;cin>>t;
     while(t--)
     {
-        int n;cin>>n;
+        int n;
+        cin>>n;
         int a[n];
         fo(i,n)cin>>a[i];
         fo(i,n)
         {
             if(i%2==0)
             {
-                if(a[i]>0)a[i]=-a[i];
+                if(a[i]>0)
+                    a[i]=-a[i];
             }
             else{
             if(a[i]<0)a[i]=-a[i];
